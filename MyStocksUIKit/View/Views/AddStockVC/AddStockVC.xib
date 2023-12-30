@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddStockVC" customModule="MyStocksUIKit" customModuleProvider="target">
+            <connections>
+                <outlet property="lblNoData" destination="dQy-ev-k8t" id="vF4-G1-oEt"/>
+                <outlet property="tableView" destination="v6Q-mv-frc" id="eeQ-2R-QJR"/>
+                <outlet property="txtSearch" destination="Xwa-2d-sU6" id="BrU-9s-0zA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kox-7k-WvE" userLabel="ViewButtons" customClass="StyleUIViewSecondaryFill" customModule="MyStocksUIKit" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0o-UZ-Qvf" customClass="StyleUIButtonBase" customModule="MyStocksUIKit" customModuleProvider="target">
+                            <rect key="frame" x="12" y="8" width="48" height="30"/>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="didTouchCancel:" destination="-1" eventType="touchUpInside" id="OTC-a4-jc2"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Stock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnn-XZ-7LN" customClass="StyleUILabelModalHeader" customModule="MyStocksUIKit" customModuleProvider="target">
+                            <rect key="frame" x="167.5" y="12.5" width="79" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <constraints>
+                        <constraint firstItem="q0o-UZ-Qvf" firstAttribute="top" secondItem="kox-7k-WvE" secondAttribute="top" constant="8" id="EBc-ek-enZ"/>
+                        <constraint firstItem="q0o-UZ-Qvf" firstAttribute="leading" secondItem="kox-7k-WvE" secondAttribute="leading" constant="12" id="I7l-23-o1B"/>
+                        <constraint firstItem="Jnn-XZ-7LN" firstAttribute="centerX" secondItem="kox-7k-WvE" secondAttribute="centerX" id="J5o-gg-R5x"/>
+                        <constraint firstAttribute="height" constant="35" id="VIi-jr-ira"/>
+                        <constraint firstItem="Jnn-XZ-7LN" firstAttribute="centerY" secondItem="q0o-UZ-Qvf" secondAttribute="centerY" id="j1S-Qe-J8B"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7AP-UG-32M" userLabel="ViewSearch" customClass="StyleUIViewSecondaryFill" customModule="MyStocksUIKit" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="35" width="414" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xwa-2d-sU6" customClass="StyleUITextFieldBase" customModule="MyStocksUIKit" customModuleProvider="target">
+                            <rect key="frame" x="8" y="8" width="398" height="34"/>
+                            <color key="backgroundColor" systemColor="systemGray2Color"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="didChangeSearch:" destination="-1" eventType="editingChanged" id="IiU-9j-IRD"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Xwa-2d-sU6" secondAttribute="trailing" constant="8" id="04j-M8-s6C"/>
+                        <constraint firstItem="Xwa-2d-sU6" firstAttribute="top" secondItem="7AP-UG-32M" secondAttribute="top" constant="8" id="FuO-FD-iLE"/>
+                        <constraint firstAttribute="bottom" secondItem="Xwa-2d-sU6" secondAttribute="bottom" constant="8" id="H9C-Yo-NKF"/>
+                        <constraint firstAttribute="height" constant="50" id="k30-yJ-1jK"/>
+                        <constraint firstItem="Xwa-2d-sU6" firstAttribute="leading" secondItem="7AP-UG-32M" secondAttribute="leading" constant="8" id="uVo-Nr-lRd"/>
+                    </constraints>
+                </view>
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v6Q-mv-frc">
+                    <rect key="frame" x="0.0" y="85" width="414" height="811"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No stocks found." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQy-ev-k8t" userLabel="NoDataLabel" customClass="StyleUILabelNormalText" customModule="MyStocksUIKit" customModuleProvider="target">
+                    <rect key="frame" x="32" y="438" width="350" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="v6Q-mv-frc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1rD-ng-urf"/>
+                <constraint firstItem="kox-7k-WvE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="4dM-AZ-mHB"/>
+                <constraint firstItem="7AP-UG-32M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AtJ-Ll-u1P"/>
+                <constraint firstItem="kox-7k-WvE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BcB-c5-PoF"/>
+                <constraint firstItem="7AP-UG-32M" firstAttribute="top" secondItem="kox-7k-WvE" secondAttribute="bottom" id="FUN-Wf-68J"/>
+                <constraint firstItem="dQy-ev-k8t" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="J5W-tP-hf0"/>
+                <constraint firstItem="kox-7k-WvE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Nlx-5N-4YG"/>
+                <constraint firstItem="v6Q-mv-frc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="W4Z-Uo-CNs"/>
+                <constraint firstItem="dQy-ev-k8t" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="hkr-xd-KcA"/>
+                <constraint firstItem="v6Q-mv-frc" firstAttribute="top" secondItem="7AP-UG-32M" secondAttribute="bottom" id="j7l-y7-V1G"/>
+                <constraint firstAttribute="bottom" secondItem="v6Q-mv-frc" secondAttribute="bottom" id="kqc-Ig-aaU"/>
+                <constraint firstItem="dQy-ev-k8t" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="puv-Gh-pgF"/>
+                <constraint firstItem="7AP-UG-32M" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wP4-Yq-OMy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dQy-ev-k8t" secondAttribute="trailing" constant="32" id="yEL-LV-djU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140.57971014492756" y="124.55357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

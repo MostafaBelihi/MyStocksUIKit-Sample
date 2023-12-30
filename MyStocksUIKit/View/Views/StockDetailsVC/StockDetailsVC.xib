@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StockDetailsVC" customModule="MyStocksUIKit" customModuleProvider="target">
+            <connections>
+                <outlet property="btnMoreNews" destination="2Je-C2-igL" id="zGK-b3-Loa"/>
+                <outlet property="constraintViewNewsHeight" destination="8WE-pa-5xJ" id="ptE-ez-Y3k"/>
+                <outlet property="indicator" destination="qZ4-ox-Mnd" id="L0n-z6-UpO"/>
+                <outlet property="lbl52WH" destination="Itl-x5-j4I" id="aV0-V5-hPY"/>
+                <outlet property="lbl52WL" destination="clF-Ce-xEs" id="dLc-ok-Bo9"/>
+                <outlet property="lblAvgVol" destination="gaM-xK-qEL" id="cCX-n8-Q8m"/>
+                <outlet property="lblCompanyName" destination="49P-Yq-k1t" id="gHD-dT-nhx"/>
+                <outlet property="lblHigh" destination="lVr-SV-6vX" id="Oq7-Of-ck3"/>
+                <outlet property="lblLow" destination="Lm9-6q-WQr" id="Bjk-qc-IJ6"/>
+                <outlet property="lblMarketCap" destination="QUB-p0-YK1" id="wkZ-fU-9HM"/>
+                <outlet property="lblNoData" destination="eQa-sQ-cF7" id="bCe-2o-dCX"/>
+                <outlet property="lblOpen" destination="UTc-4i-eFw" id="NGC-AJ-Ia7"/>
+                <outlet property="lblPercentage" destination="4o4-kU-8Bd" id="xF5-Vy-Eeo"/>
+                <outlet property="lblPrice" destination="uDt-lB-t3P" id="3nt-Go-9dD"/>
+                <outlet property="lblStockSymbol" destination="zC0-Su-Mk2" id="uim-c7-5gi"/>
+                <outlet property="lblVol" destination="hDI-0P-bPp" id="uN1-im-Xok"/>
+                <outlet property="segmentedChart" destination="PZX-HR-165" id="vsJ-UI-KIW"/>
+                <outlet property="tblNews" destination="uSu-nF-xp8" id="0Ti-E9-eBK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewChart" destination="J1j-iF-joN" id="bVt-dh-b0p"/>
+                <outlet property="viewContent" destination="Ayq-Fh-wEt" id="Bby-zS-DQy"/>
+                <outlet property="viewNews" destination="xh8-PZ-FZJ" id="UzF-dh-jM3"/>
+                <outlet property="viewSegmentedChart" destination="ssd-H0-Efw" id="7z8-T9-SV6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ayq-Fh-wEt" userLabel="ViewContent" customClass="StyleUIViewBase" customModule="MyStocksUIKit" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="642.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OgO-fM-Nv4" userLabel="ViewHead1" customClass="StyleUIViewDetailSection" customModule="MyStocksUIKit" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="82.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-----" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49P-Yq-k1t" customClass="StyleUILabelHeader" customModule="MyStocksUIKit" customModuleProvider="target">
+                                    <rect key="frame" x="10" y="15" width="66.5" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zC0-Su-Mk2" customClass="StyleUILabelSubSecondaryHeader" customModule="MyStocksUIKit" customModuleProvider="target">
+                                    <rect key="frame" x="10" y="54" width="21.5" height="13.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <constraints>
+                                <constraint firstItem="49P-Yq-k1t" firstAttribute="leading" secondItem="OgO-fM-Nv4" secondAttribute="leading" constant="10" id="2RU-Ry-cP2"/>
+                                <constraint firstAttribute="bottom" secondItem="zC0-Su-Mk2" secondAttribute="bottom" constant="15" id="RRw-fF-1es"/>
+                                <constraint firstItem="49P-Yq-k1t" firstAttribute="top" secondItem="OgO-fM-Nv4" secondAttribute="top" constant="15" id="YEN-6U-L26"/>
+                                <constraint firstItem="zC0-Su-Mk2" firstAttribute="top" secondItem="49P-Yq-k1t" secondAttribute="bottom" constant="3" id="ZYW-S3-sse"/>
+                                <constraint firstItem="zC0-Su-Mk2" firstAttribute="leading" secondItem="49P-Yq-k1t" secondAttribute="leading" id="d7Q-dl-SLT"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3g-oT-ELf" userLabel="ViewHead2" customClass="StyleUIViewDetailSection" customModule="MyStocksUIKit" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="82.5" width="414" height="66"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDt-lB-t3P" customClass="StyleUILabelStockDetailsPrice" customModule="MyStocksUIKit" customModuleProvider="target">
+                                    <rect key="frame" x="10" y="15" width="40" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4o4-kU-8Bd" customClass="StyleUILabelStockDetailsPercentage" customModule="MyStocksUIKit" customModuleProvider="target">
+                                    <rect key="frame" x="75" y="26.5" width="21" height="13.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemGray3Color"/>
+                            <constraints>
+                                <constraint firstItem="4o4-kU-8Bd" firstAttribute="leading" secondItem="uDt-lB-t3P" secondAttribute="trailing" constant="25" id="38d-Ah-OyI"/>
+                                <constraint firstItem="uDt-lB-t3P" firstAttribute="centerY" secondItem="N3g-oT-ELf" secondAttribute="centerY" id="6aN-4z-ZXk"/>
+                                <constraint firstItem="4o4-kU-8Bd" firstAttribute="centerY" secondItem="N3g-oT-ELf" secondAttribute="centerY" id="Dbo-4a-qeB"/>
+                                <constraint firstItem="uDt-lB-t3P" firstAttribute="leading" secondItem="N3g-oT-ELf" secondAttribute="leading" constant="10" id="UDz-tA-4TQ"/>
+                                <constraint firstAttribute="height" constant="66" id="mrm-b1-ZZC"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqA-d4-LIT" userLabel="ViewValues" customClass="StyleUIViewDetailSection" customModule="MyStocksUIKit" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="148.5" width="414" height="139"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbT-Fo-3NT" userLabel="ViewValues11" customClass="StyleUIViewBase" customModule="MyStocksUIKit" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="139"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="WWD-5a-NcS">
+                                            <rect key="frame" x="0.0" y="15" width="99.5" height="109"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iT1-PV-wsL" customClass="StyleUILabelNormalSecondaryText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="High" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5C-Et-NYJ" customClass="StyleUILabelNormalSecondaryText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="29.5" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Low" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2D-FL-trK" customClass="StyleUILabelNormalSecondaryText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="59" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Vol" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axa-Y7-NTg" customClass="StyleUILabelNormalSecondaryText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="88.5" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="tuM-DJ-QMx">
+                                            <rect key="frame" x="107.5" y="15" width="99.5" height="109"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTc-4i-eFw" customClass="StyleUILabelNormalText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVr-SV-6vX" customClass="StyleUILabelNormalText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="29.5" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lm9-6q-WQr" customClass="StyleUILabelNormalText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="59" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDI-0P-bPp" customClass="StyleUILabelNormalText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="88.5" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="tuM-DJ-QMx" firstAttribute="width" secondItem="RbT-Fo-3NT" secondAttribute="width" multiplier="0.48" id="0LG-g5-EFA"/>
+                                        <constraint firstAttribute="bottom" secondItem="WWD-5a-NcS" secondAttribute="bottom" constant="15" id="0gm-6G-VeA"/>
+                                        <constraint firstItem="WWD-5a-NcS" firstAttribute="leading" secondItem="RbT-Fo-3NT" secondAttribute="leading" id="ELu-vU-avB"/>
+                                        <constraint firstAttribute="bottom" secondItem="tuM-DJ-QMx" secondAttribute="bottom" constant="15" id="V5A-Gb-Sop"/>
+                                        <constraint firstAttribute="trailing" secondItem="tuM-DJ-QMx" secondAttribute="trailing" id="YtK-vD-nuU"/>
+                                        <constraint firstItem="WWD-5a-NcS" firstAttribute="width" secondItem="RbT-Fo-3NT" secondAttribute="width" multiplier="0.48" id="buJ-XD-nX0"/>
+                                        <constraint firstItem="tuM-DJ-QMx" firstAttribute="top" secondItem="RbT-Fo-3NT" secondAttribute="top" constant="15" id="jj0-JR-iNs"/>
+                                        <constraint firstItem="WWD-5a-NcS" firstAttribute="top" secondItem="RbT-Fo-3NT" secondAttribute="top" constant="15" id="lts-he-V9B"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sax-R8-gTZ" userLabel="ViewValues12" customClass="StyleUIViewBase" customModule="MyStocksUIKit" customModuleProvider="target">
+                                    <rect key="frame" x="207" y="0.0" width="207" height="139"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="HzE-9m-L0d">
+                                            <rect key="frame" x="0.0" y="15" width="99.5" height="109"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mkt Cap" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpB-xI-54a" customClass="StyleUILabelNormalSecondaryText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="52W H" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnR-Yu-EYq" customClass="StyleUILabelNormalSecondaryText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="29.5" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="52W L" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMn-zY-gGd" customClass="StyleUILabelNormalSecondaryText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="59" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Avg Vol" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zex-D4-UIO" customClass="StyleUILabelNormalSecondaryText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="88.5" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="ioh-aE-EbR">
+                                            <rect key="frame" x="107.5" y="15" width="99.5" height="109"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUB-p0-YK1" customClass="StyleUILabelNormalText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itl-x5-j4I" customClass="StyleUILabelNormalText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="29.5" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clF-Ce-xEs" customClass="StyleUILabelNormalText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="59" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaM-xK-qEL" customClass="StyleUILabelNormalText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="88.5" width="99.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="ioh-aE-EbR" firstAttribute="width" secondItem="sax-R8-gTZ" secondAttribute="width" multiplier="0.48" id="3bt-T5-MbI"/>
+                                        <constraint firstAttribute="trailing" secondItem="ioh-aE-EbR" secondAttribute="trailing" id="Gar-ZV-9ej"/>
+                                        <constraint firstItem="ioh-aE-EbR" firstAttribute="top" secondItem="sax-R8-gTZ" secondAttribute="top" constant="15" id="IaB-cU-X9h"/>
+                                        <constraint firstItem="HzE-9m-L0d" firstAttribute="width" secondItem="sax-R8-gTZ" secondAttribute="width" multiplier="0.48" id="jHI-PT-LyG"/>
+                                        <constraint firstItem="HzE-9m-L0d" firstAttribute="leading" secondItem="sax-R8-gTZ" secondAttribute="leading" id="oAY-Ib-ia7"/>
+                                        <constraint firstItem="HzE-9m-L0d" firstAttribute="top" secondItem="sax-R8-gTZ" secondAttribute="top" constant="15" id="p3Y-kP-sSg"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <constraints>
+                                <constraint firstItem="sax-R8-gTZ" firstAttribute="width" secondItem="vqA-d4-LIT" secondAttribute="width" multiplier="0.5" id="3me-Ax-Keg"/>
+                                <constraint firstItem="RbT-Fo-3NT" firstAttribute="width" secondItem="vqA-d4-LIT" secondAttribute="width" multiplier="0.5" id="8RZ-Pf-ByA"/>
+                                <constraint firstAttribute="bottom" secondItem="sax-R8-gTZ" secondAttribute="bottom" id="PAe-kF-zvq"/>
+                                <constraint firstItem="RbT-Fo-3NT" firstAttribute="leading" secondItem="vqA-d4-LIT" secondAttribute="leading" id="QQf-kz-pBf"/>
+                                <constraint firstAttribute="trailing" secondItem="sax-R8-gTZ" secondAttribute="trailing" id="SDJ-uM-rj8"/>
+                                <constraint firstItem="RbT-Fo-3NT" firstAttribute="top" secondItem="vqA-d4-LIT" secondAttribute="top" id="bUo-Ya-Dql"/>
+                                <constraint firstAttribute="bottom" secondItem="RbT-Fo-3NT" secondAttribute="bottom" id="byn-zm-QnD"/>
+                                <constraint firstItem="sax-R8-gTZ" firstAttribute="top" secondItem="vqA-d4-LIT" secondAttribute="top" id="i7e-Jg-qFS"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eUz-8B-S4K" userLabel="ViewChart" customClass="StyleUIViewDetailSection" customModule="MyStocksUIKit" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="287.5" width="414" height="300"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssd-H0-Efw" userLabel="ViewTabs" customClass="StyleUIViewBase" customModule="MyStocksUIKit" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="8" width="398" height="40"/>
+                                    <subviews>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PZX-HR-165" customClass="StyleUISegmentedControlChart" customModule="MyStocksUIKit" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="32"/>
+                                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                            <segments>
+                                                <segment title="Week"/>
+                                                <segment title="Month"/>
+                                                <segment title="Year"/>
+                                            </segments>
+                                            <color key="selectedSegmentTintColor" systemColor="systemPinkColor"/>
+                                            <connections>
+                                                <action selector="segmentedControlValueChanged:" destination="-1" eventType="valueChanged" id="f2U-Di-DbI"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="93V-kb-qRh"/>
+                                        <constraint firstItem="PZX-HR-165" firstAttribute="top" secondItem="ssd-H0-Efw" secondAttribute="top" id="Hjx-vT-nnL"/>
+                                        <constraint firstItem="PZX-HR-165" firstAttribute="leading" secondItem="ssd-H0-Efw" secondAttribute="leading" id="c5F-ZP-mlf"/>
+                                    </constraints>
+                                </view>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1j-iF-joN" userLabel="Chart" customClass="LineChartView" customModule="Charts">
+                                    <rect key="frame" x="8" y="52" width="398" height="240"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="qZ4-ox-Mnd">
+                                    <rect key="frame" x="197" y="162" width="20" height="20"/>
+                                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </activityIndicatorView>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No chart data!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQa-sQ-cF7" userLabel="NoDataLabel" customClass="StyleUILabelNormalText" customModule="MyStocksUIKit" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="162" width="374" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <constraints>
+                                <constraint firstItem="ssd-H0-Efw" firstAttribute="top" secondItem="eUz-8B-S4K" secondAttribute="top" constant="8" id="6E4-fe-kLi"/>
+                                <constraint firstItem="eQa-sQ-cF7" firstAttribute="centerX" secondItem="J1j-iF-joN" secondAttribute="centerX" id="93Y-pa-zDz"/>
+                                <constraint firstAttribute="trailing" secondItem="eQa-sQ-cF7" secondAttribute="trailing" constant="20" id="AZ4-R8-alA"/>
+                                <constraint firstItem="ssd-H0-Efw" firstAttribute="leading" secondItem="eUz-8B-S4K" secondAttribute="leading" constant="8" id="HqR-As-cfX"/>
+                                <constraint firstItem="eQa-sQ-cF7" firstAttribute="centerY" secondItem="J1j-iF-joN" secondAttribute="centerY" id="KNV-FU-yyO"/>
+                                <constraint firstItem="J1j-iF-joN" firstAttribute="leading" secondItem="eUz-8B-S4K" secondAttribute="leading" constant="8" id="L3M-06-KCV"/>
+                                <constraint firstAttribute="bottom" secondItem="J1j-iF-joN" secondAttribute="bottom" constant="8" id="LHH-Wo-Yer"/>
+                                <constraint firstItem="qZ4-ox-Mnd" firstAttribute="centerX" secondItem="J1j-iF-joN" secondAttribute="centerX" id="Lvx-cx-vMH"/>
+                                <constraint firstItem="J1j-iF-joN" firstAttribute="top" secondItem="ssd-H0-Efw" secondAttribute="bottom" constant="4" id="MMA-zt-kDC"/>
+                                <constraint firstItem="eQa-sQ-cF7" firstAttribute="leading" secondItem="eUz-8B-S4K" secondAttribute="leading" constant="20" id="PnT-5D-z2g"/>
+                                <constraint firstAttribute="trailing" secondItem="ssd-H0-Efw" secondAttribute="trailing" constant="8" id="SAc-u3-jEg"/>
+                                <constraint firstAttribute="height" constant="300" id="dAC-Mi-g6d"/>
+                                <constraint firstAttribute="trailing" secondItem="J1j-iF-joN" secondAttribute="trailing" constant="8" id="qj7-Jg-q1F"/>
+                                <constraint firstItem="qZ4-ox-Mnd" firstAttribute="centerY" secondItem="J1j-iF-joN" secondAttribute="centerY" id="rEE-3h-U58"/>
+                            </constraints>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xh8-PZ-FZJ" userLabel="ViewNews" customClass="StyleUIViewBase" customModule="MyStocksUIKit" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="587.5" width="414" height="55"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uSu-nF-xp8" userLabel="tblNews">
+                                    <rect key="frame" x="8" y="40.5" width="398" height="14.5"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                </tableView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zc-NV-4xI" customClass="StyleUILabelSubHeader" customModule="MyStocksUIKit" customModuleProvider="target">
+                                    <rect key="frame" x="10" y="10" width="42.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Je-C2-igL" customClass="StyleUIButtonLink" customModule="MyStocksUIKit" customModuleProvider="target">
+                                    <rect key="frame" x="368" y="5.5" width="36" height="30"/>
+                                    <state key="normal" title="more"/>
+                                    <connections>
+                                        <action selector="btnMoreNewDidTouch:" destination="-1" eventType="touchUpInside" id="Leg-Yj-0pj"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="8WE-pa-5xJ"/>
+                                <constraint firstItem="uSu-nF-xp8" firstAttribute="top" secondItem="8Zc-NV-4xI" secondAttribute="bottom" constant="10" id="BbG-x1-KMp"/>
+                                <constraint firstAttribute="trailing" secondItem="uSu-nF-xp8" secondAttribute="trailing" constant="8" id="Fu9-iF-ZQu"/>
+                                <constraint firstAttribute="bottom" secondItem="uSu-nF-xp8" secondAttribute="bottom" id="GDu-ig-Kye"/>
+                                <constraint firstItem="8Zc-NV-4xI" firstAttribute="top" secondItem="xh8-PZ-FZJ" secondAttribute="top" constant="10" id="QeT-rv-3UN"/>
+                                <constraint firstItem="uSu-nF-xp8" firstAttribute="leading" secondItem="xh8-PZ-FZJ" secondAttribute="leading" constant="8" id="Qwh-X5-KPs"/>
+                                <constraint firstItem="8Zc-NV-4xI" firstAttribute="leading" secondItem="xh8-PZ-FZJ" secondAttribute="leading" constant="10" id="SCc-Bg-aAA"/>
+                                <constraint firstItem="2Je-C2-igL" firstAttribute="centerY" secondItem="8Zc-NV-4xI" secondAttribute="centerY" id="heF-hb-GiE"/>
+                                <constraint firstAttribute="trailing" secondItem="2Je-C2-igL" secondAttribute="trailing" constant="10" id="uWm-ig-59g"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="eUz-8B-S4K" secondAttribute="trailing" id="Cgo-I4-pd4"/>
+                        <constraint firstItem="N3g-oT-ELf" firstAttribute="leading" secondItem="Ayq-Fh-wEt" secondAttribute="leading" id="EED-wc-J30"/>
+                        <constraint firstItem="xh8-PZ-FZJ" firstAttribute="top" secondItem="eUz-8B-S4K" secondAttribute="bottom" id="RyH-eQ-qXB"/>
+                        <constraint firstItem="vqA-d4-LIT" firstAttribute="top" secondItem="N3g-oT-ELf" secondAttribute="bottom" id="SsK-zj-YOQ"/>
+                        <constraint firstItem="OgO-fM-Nv4" firstAttribute="top" secondItem="Ayq-Fh-wEt" secondAttribute="top" id="Xxt-Tx-tJS"/>
+                        <constraint firstItem="vqA-d4-LIT" firstAttribute="bottom" secondItem="eUz-8B-S4K" secondAttribute="top" id="cdD-HT-KEw"/>
+                        <constraint firstItem="N3g-oT-ELf" firstAttribute="top" secondItem="OgO-fM-Nv4" secondAttribute="bottom" id="cex-ad-Hh6"/>
+                        <constraint firstItem="vqA-d4-LIT" firstAttribute="leading" secondItem="Ayq-Fh-wEt" secondAttribute="leading" id="ch4-7j-Xfp"/>
+                        <constraint firstAttribute="trailing" secondItem="vqA-d4-LIT" secondAttribute="trailing" id="eIp-1Q-oEE"/>
+                        <constraint firstAttribute="trailing" secondItem="OgO-fM-Nv4" secondAttribute="trailing" id="f4e-eY-6cG"/>
+                        <constraint firstAttribute="trailing" secondItem="xh8-PZ-FZJ" secondAttribute="trailing" id="jEx-lG-6yC"/>
+                        <constraint firstItem="xh8-PZ-FZJ" firstAttribute="leading" secondItem="Ayq-Fh-wEt" secondAttribute="leading" id="jJh-kX-ejm"/>
+                        <constraint firstAttribute="trailing" secondItem="N3g-oT-ELf" secondAttribute="trailing" id="nP3-N3-oBv"/>
+                        <constraint firstItem="eUz-8B-S4K" firstAttribute="leading" secondItem="Ayq-Fh-wEt" secondAttribute="leading" id="sX6-UD-PhX"/>
+                        <constraint firstAttribute="bottom" secondItem="xh8-PZ-FZJ" secondAttribute="bottom" id="upS-D4-CbS"/>
+                        <constraint firstItem="OgO-fM-Nv4" firstAttribute="leading" secondItem="Ayq-Fh-wEt" secondAttribute="leading" id="w8F-UL-4wa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Ayq-Fh-wEt" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="KYR-ql-ivx"/>
+                <constraint firstItem="Ayq-Fh-wEt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZPn-kJ-6bX"/>
+                <constraint firstItem="Ayq-Fh-wEt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="voU-Yq-clN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  MyStocksUIKit
+
+  Created by Mostafa AlBelliehy on 28/07/2022.
+  Copyright © 2022 Mostafa AlBelliehy. All rights reserved.
+*/
+
+"home" = "My Stocks";
+
+/* Buttons */
+"ok" = "OK";
+"yes" = "Yes";
+"no" = "No";
+"retry" = "Retry";
+
+"add" = "Add";
+"edit" = "Edit";
+"delete" = "Delete";
+"done" = "Done";
+
+"empty" = "---";
+
+/* Messages */
+"unknownError" = "Unknown error occurred, try again later!";
+"serviceError" = "Service error, try again later!";
+"unauthorizedUser" = "You're unauthorized!";
+"decodingError" = "Invalid data response!";
+"invalidEndpoint" = "Invalid data response!";
+"invalidResponse" = "Invalid data response!";
+"noData" = "No data in response!";
+"dataError" = "Invalid data response!";
+"apiLimitReached" = "You've reached your API call limit, wait for seconds and try again.";
+"moyaFailure" = "Unknown error occurred, try again later!";
+
+"noConnection" = "Network unavailable!";
